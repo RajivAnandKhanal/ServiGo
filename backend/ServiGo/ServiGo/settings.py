@@ -73,13 +73,22 @@ WSGI_APPLICATION = 'ServiGo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+DATABASES ={
+    'default':{
+        "ENGINE":"django.db.backends.postgresql",
+        "NAME":"postgre-database", # this name refers to the databse theat django will connect to and is the actual databse that contains the tables and data
+        "USER":"database-user", # -U database-user
+        "PASSWORD":"vbnfgh90_dfg",
+        "HOST":"0.0.0.0",
+        "PORT":"5432", # default port for postgresql
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
