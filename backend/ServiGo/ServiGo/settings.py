@@ -79,16 +79,20 @@ WSGI_APPLICATION = 'ServiGo.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+# this part is added to work in postgresql
+# Psycopg is the most popular database adapter for Python, allowing Python programs to connect to and interact with PostgreSQL databases by implementing the Python DB API 2.0 specification, enabling tasks like executing SQL, managing transactions, and handling data types efficiently, with both Psycopg/Psycopg 2 (traditional, C-based) and Psycopg 3/Psycopg 3 (newer, supporting async/await) available for different needs. 
 DATABASES ={
     'default':{
         "ENGINE":"django.db.backends.postgresql",
         "NAME":"postgre-database", # this name refers to the databse theat django will connect to and is the actual databse that contains the tables and data
         "USER":"database-user", # -U database-user
         "PASSWORD":"vbnfgh90_dfg",
-        "HOST":"0.0.0.0",
+        "HOST":"localhost",
         "PORT":"5432", # default port for postgresql
     }
 }
+# starting the postgresql service
+#  psql -h localhost -U database-user -d postgre-database 
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
