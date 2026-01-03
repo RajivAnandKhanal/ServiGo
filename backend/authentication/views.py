@@ -21,7 +21,7 @@ class UserRegistrationAPIView(GenericAPIView):
         data["tokens"]= {"refresh":str(token),
                          "access":str(token.access_token)}
         
-        return Response(data, status=status.HTTP_201_CREATED)
+        return Response(status=status.HTTP_201_CREATED)
 
 # workings
 # POST /register
