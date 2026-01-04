@@ -146,7 +146,8 @@ AUTH_USER_MODEL = "authentication.CustomUser"
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ]
+    ],
+    'EXCEPTION_HANDELER':'utils.exceptionhandler.custom_exception_handler',
 }
 
 SIMPLE_JWT = {
